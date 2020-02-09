@@ -1,33 +1,35 @@
 #container {
     display: grid;
-    grid-template-columns: 800px 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1em;
+    background-color: grey;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: ". . red ."
+                        "blue . . ."
+                        ". . . black"
+                        ". yellow . .";
 }
 
 
 #red {
     background-color: red;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 1/5;
+    grid-area: red;
 }
 
 #blue {
     background-color: blue;
-    grid-column: 2/3;
-    grid-row: 2;
+    grid-area: blue;
+
 }
 #yellow {
     background-color: yellow;
-    grid-column: 3/4;
-    grid-row: 3;
+    grid-area: yellow;
+
 }
 
 #black {
     background-color: black;
-    grid-column: 4/5;
-    grid-row: 4;
+    grid-area: black;
+
 }
 
 @media screen and (max-width: 600px) {
